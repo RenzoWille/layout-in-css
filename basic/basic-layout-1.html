@@ -6,9 +6,49 @@
     <title>Basic Layout 1</title>
     <link rel="stylesheet" href="../style.css">
     <style>
-      body {
-        display: grid;
-      }
+      * {
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  font-family: sans-serif;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 1.5fr 5fr 1fr;
+  grid-gap: 0.5rem;
+  grid-template-areas: 
+  "header, .cyan"
+  "nav, .magenta"
+  "main, .yellow"
+  "footer, .black";
+}
+body > * {
+  min-height: 1em;
+}
+h1 {
+  margin: 0;
+  font-size: 100%;
+}
+header, .cyan {
+  background: #009FDF;
+  grid-column: 1 / 4;
+}
+nav, .magenta {
+  background: #D40F7D;
+}
+main, .yellow {
+  background: #FAE100;
+  
+}
+footer, .black {
+  background: #2C2A29;
+  color: white;
+  grid-column: 1 / 4;
+ 
+}
+a, a:visited {
+  color: inherit;
+}
       /* Doe hier jouw ding! */
     </style>
   </head>
