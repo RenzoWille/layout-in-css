@@ -7,6 +7,52 @@
     <link rel="stylesheet" href="../style.css">
     <style>
       /* Doe hier jouw ding! */
+      * {
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  font-family: sans-serif;
+  display: grid;
+  grid-template-columns: 1fr 0.5fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0.5rem;
+  grid-template-areas: 
+  "header, .cyan"
+  "nav, .magenta"
+  "main, .yellow"
+  "footer, .black";
+}
+body > * {
+  min-height: 1em;
+}
+h1 {
+  margin: 0;
+  font-size: 100%;
+}
+header, .cyan {
+  background: #009FDF;
+  grid-row: 1;
+}
+nav, .magenta {
+  background: #D40F7D;
+  grid-row: 2;
+}
+main, .yellow {
+  background: #FAE100;
+  grid-column: 1 / 3;
+  grid-row: 1;
+}
+footer, .black {
+  background: #2C2A29;
+  color: white;
+  grid-column: 1 / 3;
+  grid-row: 2;
+ 
+}
+a, a:visited {
+  color: inherit;
+}
     </style>
   </head>
   <body id="basic-layout-4">
