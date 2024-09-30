@@ -6,6 +6,52 @@
     <title>Basic Layout 2</title>
     <link rel="stylesheet" href="../style.css">
     <style>
+        * {
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  font-family: sans-serif;
+  display: grid;
+  grid-template-areas: 
+  "header, .cyan"
+  "nav, .magenta"
+  "main, .yellow"
+  "footer, .black";
+}
+body > * {
+  min-height: 1em;
+}
+h1 {
+  margin: 0;
+  font-size: 100%;
+}
+header, .cyan {
+  background: #009FDF;
+  grid-column: 1;
+  height: 15rem;
+}
+nav, .magenta {
+  background: #D40F7D;
+  grid-column: 1;
+  height: 5rem;
+}
+main, .yellow {
+  background: #FAE100;
+  grid-column: 1;
+  height: 25rem;
+  
+}
+footer, .black {
+  background: #2C2A29;
+  color: white;
+  grid-column: 1;
+  height: 10rem;
+ 
+}
+a, a:visited {
+  color: inherit;
+}
       /* Doe hier jouw ding! */
     </style>
   </head>
